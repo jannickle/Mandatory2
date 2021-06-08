@@ -13,12 +13,12 @@ import com.mandatory2.repo.Repos;
 public class SnapDetailsActivity extends AppCompatActivity implements TaskListener {
 
     private ImageView imageView;
-    private Snapinfo currentsnap;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.snap_details);
         imageView = findViewById(R.id.imageView2);
+
         String imageUrl = getIntent().getStringExtra("url");
         Repos.r().getimage(imageUrl,this::receive);
         Repos.r().deleteimage(getIntent().getStringExtra("url"));
@@ -30,4 +30,8 @@ public class SnapDetailsActivity extends AppCompatActivity implements TaskListen
         Bitmap bmp = BitmapFactory.decodeByteArray(bytes,0,bytes.length);
         imageView.setImageBitmap(bmp);
     }
+
+
+
+
 }

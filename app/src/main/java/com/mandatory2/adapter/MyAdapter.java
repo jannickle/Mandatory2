@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import com.mandatory2.R;
 import com.mandatory2.model.Snapinfo;
-import com.mandatory2.model.Title;
 
 import java.util.List;
 

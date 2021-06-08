@@ -9,42 +9,58 @@
     android:padding="10dp"
     tools:context=".MainActivity">
 
+
+    <TextView
+        android:id="@+id/fbName"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="Anonymous user"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp" />
+
     <ImageView
+        android:id="@+id/image_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:id="@+id/image_view" />
-  <Button
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:id="@+id/bt_open"
-      android:text="Open Camera"
-      android:layout_marginTop="10dp"/>
+        android:layout_weight="1" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/text"-->
-<!--        android:textStyle="bold|italic"-->
-<!--        android:textSize="24sp"-->
-<!--        android:padding="4dp"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_marginBottom="16sp"/>-->
     <EditText
         android:id="@+id/editName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Enter desired text here"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-         />
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:hint="Enter text for the snap"
+        android:inputType="textPersonName" />
+
     <Button
+        android:id="@+id/bt_open"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Send a Snap"
+        app:icon="@android:drawable/ic_menu_camera" />
+
+    <Button
         android:id="@+id/bt_openLists"
-        android:text="See Snaps"
-        android:layout_marginTop="10dp"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="See Snaps (For devs)" />
+
+    <Button
+        android:id="@+id/bt_openMaps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View map" />
 </LinearLayout>
